@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 TextFormField(
                   controller: _anchoController,
                   decoration: InputDecoration(
-                    labelText: 'Ancho (m)',
+                    labelText: 'Ancho (cm)',
                   ),
                   keyboardType: TextInputType.number,
                   validator: (value) {
@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 TextFormField(
                   controller: _altoController,
                   decoration: InputDecoration(
-                    labelText: 'Alto (m)',
+                    labelText: 'Alto (cm)',
                   ),
                   keyboardType: TextInputType.number,
                   validator: (value) {
@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 TextFormField(
                   controller: _profundoController,
                   decoration: InputDecoration(
-                    labelText: 'Profundidad (mm)',
+                    labelText: 'Profundidad (cm)',
                   ),
                   keyboardType: TextInputType.number,
                   validator: (value) {

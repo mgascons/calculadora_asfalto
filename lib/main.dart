@@ -69,10 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _calcularAsfalto() {
     if (_formKey.currentState!.validate()) {
-      double ancho = double.parse(_anchoController.text);
-      double alto = double.parse(_altoController.text);
-      double profundoMm = double.parse(_profundoController.text);
-      double profundo = profundoMm / 1000; // Convertir milímetros a metros
+      double anchoCm = double.parse(_anchoController.text);
+      double altoCm = double.parse(_altoController.text);
+      double profundoCm = double.parse(_profundoController.text);
+
+      double ancho = anchoCm / 100; // Convertir centímetros a metros
+      double alto = altoCm / 100; // Convertir centímetros a metros
+      double profundo = profundoCm / 100; // Convertir centímetros a metros
 
       _volumenAsfalto = ancho * alto * profundo;
       _pesoAsfalto = _volumenAsfalto * _densidadAsfalto;
@@ -101,11 +104,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                /*SizedBox(height: 20),
+                SizedBox(height: 20),
                 Image.asset(
                   'assets/images/explicacion.png',
-                  height: 400, // Ajusta el tamaño según sea necesario
-                ),*/
+                  height: 100, // Ajusta el tamaño según sea necesario
+                ),
                 SizedBox(height: 20),
                 TextFormField(
                   controller: _anchoController,
@@ -181,4 +184,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

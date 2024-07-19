@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(height: 20),
                 Image.asset(
                   'assets/images/explicacion.png',
-                  height: 400, // Ajusta el tamaño según sea necesario
+                  height: 100, // Ajusta el tamaño según sea necesario
                 ),
                 SizedBox(height: 20),
                 TextFormField(
